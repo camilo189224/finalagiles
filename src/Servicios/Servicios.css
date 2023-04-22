@@ -1,0 +1,12 @@
+.fondo{
+    background-color: green;
+    border-radius: 30px;
+    text-align: center;
+    font-size: small;
+    color: wheat;
+    transition: 300ms;
+    
+}
+.fondo:hover{
+    transform: scale(1.15);
+}

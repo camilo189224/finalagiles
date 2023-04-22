@@ -1,0 +1,11 @@
+.btn{
+    margin-top: 3%;
+    margin-left: 42.8%;
+    background-color: orange;
+    width: 70px;
+
+}
+.center{
+    justify-content: center;
+    align-items: center;
+}

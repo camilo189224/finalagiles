@@ -1,0 +1,14 @@
+.menu{
+    background-color: teal;
+}
+
+.menu1{
+    transition: 300ms;
+}
+.menu1:hover{
+    transform: scaleX(1.15);
+}
+.img{
+    width: 30px;
+    height: 30px;
+}

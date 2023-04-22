@@ -1,0 +1,41 @@
+.banner1{
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/restaurantesrtolima.appspot.com/o/logoApp.png?alt=media&token=c97949bd-66bc-4ec4-9f0d-84ce11b61ada");
+    background-position: top center;
+    height: 100%;
+    width: 100%;
+    background-size: cover ;
+    padding: 40%;
+    position: relative;
+    z-index: 1;
+    background-attachment: fixed;
+    
+}
+.banner1::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.sombra{
+    display: block;
+    /*text-align: center;
+    /*justify-content: center;
+    /*align-items: center;*/
+    margin: auto;
+    filter: grayscale(90%);
+    
+}
+
+.zoom{
+    transition: transform .4s;
+}
+
+.zoom:hover{
+    transform: scale(1.1)
+}
