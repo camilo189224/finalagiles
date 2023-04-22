@@ -130,7 +130,7 @@ export function Administrador(){
                                                 class="input-group-text" 
                                                 id="basic-addon1"><i class="bi bi-currency-exchange"></i></span>
                                             <input 
-                                                type="number" 
+                                                type="text" 
                                                 class="form-control" 
                                                 placeholder="Precio Unitario" 
                                                 id="precio"
