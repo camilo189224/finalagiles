@@ -1,7 +1,6 @@
 import './Tienda.css'
 import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-
 import { consultarProductos } from '../services/consultarProductos'
 
 export function Tienda(){
@@ -38,7 +37,8 @@ export function Tienda(){
     if(cargaServicio){
         return(
             <>
-                <h1>CARGANDO....</h1>
+                consultarProductos()
+                mostrarAlerta()
             </>
         )
         
@@ -50,6 +50,7 @@ export function Tienda(){
                     <div class="banner1"></div>
                 </section>
                 <div class="row row-cols-1 row-cols-md-3 g-3 my-5">
+                {console.log(productos)}
                     {
                         productos.map(function(producto){
                             return(
@@ -68,7 +69,7 @@ export function Tienda(){
                                         <p class="text-center fw-bold">{producto.descripcion}</p>
                                         <br></br>
                                         <div class="row detalles">
-                                            <h3 class="col-12 text-sucess text-center">${producto.precio}</h3>
+                                            <h3 class="col-12 text-sucess text-center">${producto.precioUnitario}</h3>
                                         </div>
                                         
                                     </div>
@@ -87,7 +88,7 @@ export function Tienda(){
         precio:"13.000", 
         descripcion:"Porcion pequeña para saciar las ganas de garritas 2 arepitas y 2 papitas cocidas.",
         foto:"https://firebasestorage.googleapis.com/v0/b/restaurantesrtolima.appspot.com/o/plato_200grs.jpg?alt=media&token=33c9bdd5-7faa-45de-a317-829811b0ebe4"},
-        
+    
         {nombre: "Plato de 250grs", 
         precio:"15.000", 
         descripcion:"Porcion personal acompañada de garrita arepita y papita cocida.", 

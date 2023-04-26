@@ -1,6 +1,6 @@
 export async function consultarProductos(){
 
-    const URL="http://localhost:8080/tienda/api/"
+    const URL="http://localhost:8080/restaurantesr/api/"
 
     const PETICION={
         method:'GET'

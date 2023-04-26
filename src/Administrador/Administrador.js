@@ -1,6 +1,7 @@
 import { useState, /*useEffect*/ } from 'react'
 import './Administrador.css'
 import { registrarProductosEnBd } from '../services/agregarProducto'
+import Swal from 'sweetalert2'
 
 export function Administrador(){
 
@@ -8,7 +9,7 @@ export function Administrador(){
     const[foto, setFoto] = useState("")
     const[descripcion, setDescripcion] = useState("")
     const[cantidad, setCantidad] = useState("")
-    const[precio, setprecio] = useState("")
+    const[precioUnitario, setprecio] = useState("")
     const[clasificacion, setClasificacion] = useState("")
     const[marca, setMarca] = useState("")
     const[presentacion, setPresentacion] = useState("")
@@ -27,7 +28,7 @@ export function Administrador(){
             "foto": foto,
             "descripcion": descripcion,
             "cantidad": cantidad,
-            "precio": precio,
+            "precioUnitario": precioUnitario,
             "clasificacion": clasificacion,
             "marca": marca,
             "presentacion": presentacion,
@@ -43,8 +44,12 @@ export function Administrador(){
         registrarProductosEnBd(datosProducto)
         .then(function(respuest){
             console.log(respuest)
+            Swal.fire(
+                'Good job!',
+                'You clicked the button!',
+                'success'
+              )
         })
-        
     }
 
     return(
@@ -61,7 +66,7 @@ export function Administrador(){
                             
                         </div>
                         <div class="col-6">
-                            <h2>Plato de 200grs</h2>
+                            <h2>Ingrese el producto que desea guardar</h2>
                             <form class="my-3" onSubmit={procesarFormulario}>
                                 <div class="row">
                                     <div class="col-6">
@@ -130,7 +135,7 @@ export function Administrador(){
                                                 class="input-group-text" 
                                                 id="basic-addon1"><i class="bi bi-currency-exchange"></i></span>
                                             <input 
-                                                type="text" 
+                                                type="number" 
                                                 class="form-control" 
                                                 placeholder="Precio Unitario" 
                                                 id="precio"

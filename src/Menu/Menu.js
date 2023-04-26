@@ -20,10 +20,10 @@ export function Menu(){
                             <Link class="nav-link active menu1" aria-current="page" to="/">Inicio</Link>
                             </li>
                             <li class="nav-item">
-                            <Link class="nav-link menu1" to="/administrar">Productos de la Casa</Link>
+                            <Link class="nav-link menu1" to="/administrar">Administrar Productos</Link>
                             </li>
                             <li class="nav-item">
-                            <Link class="nav-link menu1" to="/productos">Todos los Productos</Link>
+                            <Link class="nav-link menu1" to="/productos">Nuestros Productos</Link>
                             </li>
                         </ul>
                     </div>

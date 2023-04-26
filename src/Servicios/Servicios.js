@@ -10,11 +10,11 @@ export function Servicios(){
                         <i class="bi bi-credit-card-2-back fs-1"></i>
                     </div>
                     <div class="col-12 col-md-2 fondo">
-                        <p>Productos de la Casa</p>
+                        <p>Administrar Productos</p>
                         <Link to="/administrar"><i class="bi bi-shop fs-1"></i></Link>
                     </div>
                     <div class="col-12 col-md-2 fondo">
-                        <p>Todos los Productos</p>
+                        <p>Nuestros Productos</p>
                         <Link to="/productos"><i class="bi bi-basket2 fs-1"></i></Link>
                     </div>
                     <div class="col-12 col-md-2 fondo">
